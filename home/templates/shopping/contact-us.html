@@ -1,0 +1,161 @@
+{% extends 'shopping/main.html' %}
+
+{% block title %}
+    ALKA | LIÊN HỆ
+{% endblock title %}
+
+{% block content %}
+    <div class="breadcrumb-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12"> <br><br>
+                    <div class="row breadcrumb_box  align-items-center">
+                        <div class="col-lg-6 col-md-6 col-sm-6 text-center text-sm-left">
+                            <h2 class="breadcrumb-title">Liên Hệ</h2>
+                        </div>
+                        <div class="col-lg-6  col-md-6 col-sm-6">
+                            <!-- breadcrumb-list start -->
+                            <ul class="breadcrumb-list text-center text-sm-right">
+                                <li class="breadcrumb-item"><a href="{% url 'index.html' %)">Home</a></li>
+                                <li class="breadcrumb-item active">Liên hệ</li>
+                            </ul>
+                            <!-- breadcrumb-list end -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- breadcrumb-area end -->
+
+
+
+
+
+
+    <div class="site-wrapper-reveal border-bottom">
+
+        <div class="contact-us-info-area mt-30 section-space--mb_60">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="single-contact-info-item">
+                            <div class="icon">
+                                <i class="icon-clock3"></i>
+                            </div>
+                            <div class="iconbox-desc">
+                                <h6 class="mb-10">Giờ làm việc</h6>
+                                <p>Thứ 2 - Thứ 6 : 8:00 – 18:00 <br>Thứ 7 : 08:00 – 12:00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="single-contact-info-item">
+                            <div class="icon">
+                                <i class="icon-telephone"></i>
+                            </div>
+                            <div class="iconbox-desc">
+                                <h6 class="mb-10">Số hotline</h6>
+                                <p>1900 1869</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="single-contact-info-item">
+                            <div class="icon">
+                                <i class="icon-envelope-open"></i>
+                            </div>
+                            <div class="iconbox-desc">
+                                <h6 class="mb-10">Email</h6>
+                                <p>thanhhuyen@topshopping.vn<br>linhnt@topshopping.vn</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="single-contact-info-item">
+                            <div class="icon">
+                                <i class="icon-map-marker"></i>
+                            </div>
+                            <div class="iconbox-desc">
+                                <h6 class="mb-10">Địa điểm chúng tôi</h6>
+                                <p>269/5 Đường Lê văn Thịnh, <br> Phường Cát Lái Quận 2, <br>TP. Hồ Chí Minh, Việt Nam.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-us-page-warpper section-space--pb_120">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="border-top">
+                            <div class="row">
+                                <div class="col-lg-7">
+                                    <div class="contact-form-wrap  section-space--mt_60">
+                                        <h5 class="mb-10">Liên Lạc</h5>
+                                        <p>Viết thư cho chúng tôi !</p>
+                                        <form id="contact-form" class="mt-30" action="https://hasthemes.com/file/mail.php" method="post">
+                                            <div class="contact-form">
+                                                <div class="contact-input">
+                                                    <div class="contact-inner">
+                                                        <input name="con_name" type="text" placeholder="Tên *">
+                                                    </div>
+                                                    <div class="contact-inner">
+                                                        <input name="con_email" type="email" placeholder="Email *">
+                                                    </div>
+                                                </div>
+                                                <div class="contact-inner">
+                                                    <input name="con_subject" type="text" placeholder="Tựa đề *">
+                                                </div>
+                                                <div class="contact-inner contact-message">
+                                                    <textarea name="con_message" placeholder="Hãy mô tả điều bạn cần."></textarea>
+                                                </div>
+                                                <div class="submit-btn mt-20">
+                                                    <button class="btn btn--black btn--md" type="submit">Gửi</button>
+                                                    <p class="form-messege"></p>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 ml-auto">
+                                    <div class="conatact-info-text section-space--mt_60">
+                                        <h5 class="mb-10">Văn phòng của chúng tôi</h5>
+                                        <p class="mt-30">Số 13 đường 42, Phường Bình Trưng Đông, Quận 2, TP. Hồ Chí Minh. <br>1900 1869 <br>thanhhuyen@topshopping.vn</p>
+                                        <div class="product_socials mt-30">
+                                            <span class="label">FOLLOW US:</span>
+                                            <ul class="helendo-social-share socials-inline">
+                                                <li>
+                                                    <a class="share-facebook helendo-facebook" href="#" target="_blank"><i class="social_facebook"></i></a>
+                                                </li>
+                                                <li>
+                                                    <a class="share-google-plus helendo-google-plus" href="#" target="_blank"><i class="social_googleplus"></i></a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="map-area">
+            <div class="google-map">
+                <div id="googleMap-1" class="embed-responsive-item googleMap-1" data-lat="40.730610" data-Long="-73.935242"></div>
+            </div>
+        </div>
+
+    </div>
+
+{% endblock content %}
+
+
+
+  

@@ -1,0 +1,390 @@
+{% extends 'shopping/main.html' %}
+
+{% block title %}
+ALKA | Details
+{% endblock title %}
+
+{% block content %}
+{% load static %}
+{% load humanize %}
+
+<!-- breadcrumb-area start -->
+<div class="breadcrumb-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-12"> <br><br>
+                <div class="row breadcrumb_box  align-items-center">
+                    <div class="col-lg-6 col-md-6 col-sm-6 text-center text-sm-left">
+                        <h2 class="breadcrumb-title">SẢN PHẨM</h2>
+                    </div>
+                    <div class="col-lg-6  col-md-6 col-sm-6">
+                        <!-- breadcrumb-list start -->
+                        <ul class="breadcrumb-list text-center text-sm-right">
+                            <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+                            <li class="breadcrumb-item active">Sản Phẩm</li>
+                        </ul>
+                        <!-- breadcrumb-list end -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- breadcrumb-area end -->
+
+
+
+
+
+
+<div class="site-wrapper-reveal">
+
+    <div class="single-product-wrap section-space--pt_90 border-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 col-md-6 col-sm-12 col-xs-12">
+
+                    <!-- Product Details Left -->
+                    <div class="product-details-left">
+                        
+                        <div class="product-details-images-2 slider-lg-image-2">
+                            {% for images in product_image %}
+                            <div class="easyzoom-style">
+                                <div class="easyzoom easyzoom--overlay">
+                                    <a href="{% static images.image_path %}" class="poppu-img">
+                                        <img src="{% static images.image_path %}" class="img-fluid" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            {% endfor %}
+
+                            <!-- <div class="easyzoom-style">
+                                    <div class="easyzoom easyzoom--overlay">
+                                        <a href="{% static 'images/product/single-product-02.jpg' %}" class="poppu-img">
+                                            <img src="{% static 'images/product/single-product-03.jpg' %}" class="img-fluid" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="easyzoom-style">
+                                    <div class="easyzoom easyzoom--overlay">
+                                        <a href="{% static 'images/product/single-product-03.jpg' %}" class="poppu-img">
+                                            <img src="{% static 'images/product/single-product-03.jpg' %}" class="img-fluid" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="easyzoom-style">
+                                    <div class="easyzoom easyzoom--overlay">
+                                        <a href="{% static 'images/product/single-product-04.jpg' %}" class="poppu-img">
+                                            <img src="{% static 'images/product/single-product-04.jpg' %}" class="img-fluid" alt="">
+                                        </a>
+                                    </div>
+                                </div> -->
+
+                        </div>
+                        <div class="product-details-thumbs-2 slider-thumbs-2">
+                            {% for imagesmall in product_image %}
+                            <div class="sm-image"><img src="{% static imagesmall.image_path %}" width="100"
+                                    alt="product image thumb"></div>
+                            {% endfor %}
+                        </div>
+                        
+                    </div>
+                    <!--// Product Details Left -->
+                </div>
+                <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12">
+                    <div class="product-details-content">
+
+                        <h5 class="font-weight--reguler mb-10">{{ product.name }}</h5>
+                        <div class="quickview-ratting-review mb-10">
+                            <div class="quickview-ratting-wrap">
+                                <div class="quickview-ratting">
+                                    <i class="yellow icon_star"></i>
+                                    <i class="yellow icon_star"></i>
+                                    <i class="yellow icon_star"></i>
+                                    <i class="yellow icon_star"></i>
+                                    <i class="yellow icon_star"></i>
+                                </div>
+                                <a href="#"> </a>
+                            </div>
+                        </div>
+                        <h3 class="price">{{ product.price|intcomma}} VND</h3>
+
+                        <div class="stock in-stock mt-10">
+                            {% if product.status == 1 %}
+                            <p>Tình Trạng: <span> Còn hàng</span></p>
+                            {% else %}
+                            <p>Tình Trạng: <span> Đã hết hàng</span></p>
+                            {% endif %}
+                        </div>
+
+                        <!-- <div class="quickview-peragraph mt-10">
+                                <p>At vero accusamus et iusto odio dignissimos blanditiis praesentiums dolores molest.</p>
+                            </div> -->
+
+                        <div class="product-size-wrapper mt-20">
+                            <div class="tab-content d-flex">
+                                <label class="mr-2">Quy cách đóng gói:</label>
+                                <div class="tab-pane fade show active" id="tab_list_l">
+                                   1 Hộp gồm 50 cái khẩu trang
+                                </div><br>
+                                
+                                <!-- <div class="tab-pane fade" id="tab_list_m">
+                                    Túi 25 cái
+                                </div>
+                                <div class="tab-pane fade" id="tab_list_s">
+                                    Túi 10 cái
+                                </div> -->
+                            </div>
+                            <label class="mr-2"><i>*Với túi Zip đóng gói theo yêu cầu của quý khách, 10 cái hoặc 25 cái / 1 túi. <br> Xin vui lòng liên hệ chúng tôi theo số hotline!</i></label>
+
+                            <!-- <ul class="nav product-size-menu" role="tablist">
+
+                                <li class="tab__item nav-item active">
+                                    <a class="nav-link active" data-toggle="tab" href="#tab_list_l" role="tab">50</a>
+                                </li>
+                                <li class="tab__item nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#tab_list_m" role="tab">25</a>
+                                </li>
+                                <li class="tab__item nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#tab_list_s" role="tab">10</a>
+                                </li>
+
+                            </ul> -->
+                        </div>
+
+                        <div class="quickview-action-wrap mt-30">
+                            <div class="quickview-cart-box">
+                                <!-- <div class="quickview-quality">
+                                    <form action="{{item.quantity}}">
+                                        <div class="">
+                                            <input class="" type="text" name="qtybutton" value="1" size="3">
+                                        </div>
+                                    </form>
+                                    
+                                </div> -->
+
+                                <div class="quickview-button">
+                                    <div class="quickview-cart button">
+                                        <button data-product="{{ product.id }}" data-action="add"
+                                            class="btn--lg btn--black update-cart font-weight--reguler text-white">Thêm
+                                            vào giỏ hàng</button>
+                                    </div>
+                                    <!-- <div class="quickview-wishlist button">
+                                            <a title="Add to wishlist" href="#"><i class="icon-heart"></i></a>
+                                        </div> -->
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="product_meta mt-30">
+                            <div class="sku_wrapper item_meta">
+                                <span class="label"> SKU: </span>
+                                <span class="sku"> </span>
+                            </div>
+
+                            <div class="posted_in item_meta">
+                                <span class="label">Categories: </span><a href="{% url 'view_shop' %}">Khẩu Trang Y
+                                    Tế</a>, <a href="{% url 'view_shop' %}">Găng Tay Y Tế</a>, <a
+                                    href="{% url 'view_shop' %}">Khăn Giấy Cồn</a>,
+                            </div>
+
+
+                            <!-- <div class="tagged_as item_meta">
+                                    <span class="label">Tag: </span><a href="#">Pottery</a>
+                                </div> -->
+                        </div>
+
+                        <div class="product_socials section-space--mt_60">
+                            <span class="label">Chia sẻ sản phẩm :</span>
+                            <ul class="helendo-social-share socials-inline">
+                                <li>
+                                    <a class="share-facebook helendo-facebook" href="https://www.facebook.com/"
+                                        target="_blank"><i class="social_facebook"></i></a>
+                                </li>
+                                <li>
+                                    <a class="share-google-plus helendo-google-plus" href="#" target="_blank"><i
+                                            class="social_googleplus"></i></a>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="product-details-tab section-space--pt_90">
+                        <ul role="tablist" class=" nav">
+                            <li class="active" role="presentation">
+                                <a data-toggle="tab" role="tab" href="#description" class="active">Mô tả sản phẩm</a>
+                            </li>
+                            <li role="presentation">
+                                <a data-toggle="tab" role="tab" href="#sheet">Thông tin chi tiết</a>
+                            </li>
+                            <li role="presentation">
+                                <a data-toggle="tab" role="tab" href="#reviews">Khách hàng nhận xét</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="product_details_tab_content tab-content mt-30">
+                        <!-- Start Single Content -->
+                        <div class="product_tab_content tab-pane active" id="description" role="tabpanel">
+                            <div class="product_description_wrap">
+                                <div class="product-details-wrap">
+                                    <div class="row align-items-center">
+                                        <div class="col-lg-7 order-md-1 order-2">
+                                            <div class="details mt-30">
+                                                <h5 class="mb-10">Chi tiết</h5>
+                                                <p>{{ product.detail|safe|linebreaks}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-5 order-md-2 order-1">
+                                            <div class="images">
+                                                <img src="{% static 'product_image.image_detail' %}" class="img-fluid"
+                                                    alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-details-wrap">
+                                    <div class="row align-items-center">
+                                        <div class="col-lg-7 order-md-1 order-2">
+                                            <div class="details mt-30">
+                                                <div class="pro_feature">
+                                                    <h5 class="title_3 mb-10">Tính năng</h5>
+                                                    <p>{{ product.detail_features|safe|linebreaks}}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-5 order-md-2 order-1">
+                                            <div class="images">
+                                                <img src="{% static 'images/product/single-product-02.jpg' %}"
+                                                    class="img-fluid" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Single Content -->
+                        <!-- Start Single Content -->
+                        <div class="product_tab_content tab-pane" id="sheet" role="tabpanel">
+                            <div class="pro_feature">
+                                <table class="shop_attributes">
+                                    <tbody>
+                                        <tr>
+                                            <th>Thùng</th>
+                                            <td>50 hộp</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Trọng lượng</th>
+                                            <td>1.2 kg</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Kích thước</th>
+                                            <td>540 × 390 × 570 cm</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- End Single Content -->
+                        <!-- Start Single Content -->
+                        <div class="product_tab_content tab-pane" id="reviews" role="tabpanel">
+
+                            <!-- Start RAting Area -->
+                            <div class="rating_wrap mb-30">
+                                <h4 class="rating-title-2">Nhận xét về mặt hàng “{{ product.name }}”</h4>
+                                <p></p>
+                                <div class="rating_list">
+                                    <div class="product-rating d-flex">
+                                        <i class="yellow icon_star"></i>
+                                        <i class="yellow icon_star"></i>
+                                        <i class="yellow icon_star"></i>
+                                        <i class="yellow icon_star"></i>
+                                        <i class="yellow icon_star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End RAting Area -->
+                            <div class="comments-area comments-reply-area">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <form action="#" class="comment-form-area">
+                                            <p class="comment-form-comment">
+                                                <label>Đánh giá của bạn *</label>
+                                                <textarea class="comment-notes" required="required"></textarea>
+                                            </p>
+                                            <div class="comment-input">
+                                                <p class="comment-form-author">
+                                                    <label>Tên <span class="required">*</span></label>
+                                                    <input type="text" required="required" name="Name">
+                                                </p>
+                                                <p class="comment-form-email">
+                                                    <label>Email <span class="required">*</span></label>
+                                                    <input type="text" required="required" name="email">
+                                                </p>
+                                            </div>
+
+                                            <div class="comment-form-submit">
+                                                <input type="submit" value="Gửi nhận xét" class="comment-submit">
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Single Content -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="related-products section-space--ptb_90">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-title text-center mb-30">
+                            <h4>Những sản phẩm liên quan</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row product-slider-active">
+                    {% for product in products %}
+                    <div class="col-lg-12">
+                        <!-- Single Product Item Start -->
+                        <div class="single-product-item text-center">
+                            <div class="products-images">
+                                <a href="{% url 'detail' product_id=product.id %}" class="product-thumbnail">
+                                    <img src="{% static product.image %}" class="img-fluid" alt="Product Images">
+                                    </span>
+                                </a>
+                                <div class="product-actions">
+                                    <!-- <a href="#" data-toggle="modal" data-target="#prodect-modal"><i class="p-icon icon-plus"></i><span class="tool-tip">Quick View</span></a> -->
+                                    <a href="{% url 'detail' product_id=product.id %}"><i class="p-icon icon-bag2"></i>
+                                        <span class="tool-tip">Xem chi tiết</span></a>
+                                </div>
+                            </div>
+                            <div class="product-content">
+                                <h6 class="prodect-title"><a href="{% url 'detail' product_id=product.id %}">{{ product.name }}</a></h6>
+                                <div class="prodect-price">
+                                    <span class="new-price">{{ product.price|intcomma }} VND</span>
+                                </div>
+                            </div>
+                        </div><!-- Single Product Item End -->
+                    </div>
+                    {% endfor %}
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+{% endblock content %}

@@ -1,0 +1,791 @@
+{% extends 'shopping/main.html' %}
+{% block title %}
+Home
+{% endblock title %}
+
+
+{% block content %}
+{% load static %}
+{% load custom_filter %}
+{% load humanize %}
+<div class="site-wrapper-reveal" >
+
+
+    <!-- Hero Slider Area Start -->
+    <!-- <div class="hero-area hero-slider-five">
+            <div class="single-hero-slider-five">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="hero-content-wrap">
+                                <div class="hero-text-five mt-lg-5">
+                                    <h6 class=" mb-30 small-title">
+                                        MASK <br> COLLECTION <br>
+                                </h6>
+                                    <h1>Disposable <br> Protective Face Mask</h1>
+
+                                    <div class="button-box section-space--mt_60">
+                                        <a href="shop-left-sidebar.html" class="text-btn-normal font-weight--reguler font-lg-p">Discover Collection <i class="icon-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                                <div class="inner-images">
+                                    <div class="image-one">
+                                        <img src="{% static 'images/hero/home-full-width-2.png' %}" class="img-fluid" alt="Image">
+                                    </div>
+                                    <div class="image-two">
+                                        <img src="{% static 'images/hero/home-full-width-4.png' %}" class="img-fluid" alt="Image">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="single-hero-slider-five">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="hero-content-wrap">
+                                <div class="hero-text-five mt-lg-5">
+                                    <h6 class=" mb-30 small-title">
+                                        MASK <br> COLLECTION <br>
+                                </h6>
+                                    <h1>Protect <br>Yourself In Style </h1>
+
+                                    <div class="button-box section-space--mt_60">
+                                        <a href="shop-left-sidebar.html" class="text-btn-normal font-weight--reguler font-lg-p">Discover Collection <i class="icon-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                                <div class="inner-images">
+                                    <div class="image-one">
+                                        <img src="{% static 'images/hero/home-full-width-2.png' %}" class="img-fluid" alt="Image">
+                                    </div>
+                                    <div class="image-two">
+                                        <img src="{% static 'images/hero/home-full-width-1.png' %}" class="img-fluid" alt="Image">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div> -->
+    <div class="hero-area hero-slider-10" >
+        <div class="single-hero-slider-10 " style="background-color: rgba(88, 173, 252, 0.644);" data-title="01">
+            <div class="container" >
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="hero-content-wrap" >
+                            <div class="hero-text-7 mt-lg-5">
+                                <h5 class="mb-20 text-color-primary">
+                                    MASK COLLECTION 
+                                </h5>
+                                <h1>Disposable Face Masks</h1>
+
+                                <p class="mt-30">Hít thở một cách trong sạch và khỏe mạnh với khẩu trang của chúng tôi <br> Hãy chọn khẩu trang cho mình và gia đình trong nhiều màu sắc phong phú</p>
+
+                                <!-- <div class="button-box section-space--mt_60">
+                                        <a href="shop-left-sidebar.html" class="text-btn-normal font-weight--reguler font-lg-p">Shop Now <i class="icon-arrow-right"></i></a>
+                                    </div> -->
+                            </div>
+                            <div class="inner-images">
+                                <div class="image-one">
+                                    <img src="{% static 'images/masks/ezgif.com-gif-maker-removebg2.png' %}"
+                                        class="img-fluid" alt="Image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="single-hero-slider-10" data-title="02" style="background-color: rgba(245, 207, 37, 0.733);" >
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="hero-content-wrap">
+                            <div class="hero-text-7 mt-lg-5">
+                                <h5 class="mb-20 text-color-primary">
+                                    MASK COLLECTION
+                                </h5>
+                                <h1>Face Mask for Your Kids </h1>
+
+                                <p class="mt-30">Với khẩu trang dành cho trẻ em của ALKA Gluta, <br> Con em bạn sẽ không còn ngại đeo khẩu trang khi ra đường. <br>
+                                    Chúng tôi hỗ trợ bảo vệ trẻ em hàng ngày với nhiều màu dễ thương.</p>
+
+                                <!-- <div class="button-box section-space--mt_60">
+                                        <a href="shop-left-sidebar.html" class="text-btn-normal font-weight--reguler font-lg-p">Shop Now <i class="icon-arrow-right"></i></a>
+                                    </div> -->
+                            </div>
+                            <div class="inner-images">
+                                <div class="image-one">
+                                    <img src="{% static 'images/masks/kids2.png' %}" class="img-fluid"
+                                        alt="Image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="single-hero-slider-10" data-title="03"  style="background-color: rgba(167, 255, 233, 0.733);">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="hero-content-wrap">
+                                <div class="hero-text-7 mt-lg-5">
+                                    <h5 class="mb-20 text-color-primary">
+                                       MASK COLLECTION
+                                    </h5>
+                                    <h1>Medical Face Masks</h1>
+
+                                    <p class="mt-30">Những chiếc khẩu trang 4 lớp rất thoải mái khi đeo và <br> phù hợp cho sử dụng trong công việc và cá nhân.</p>
+
+                                    <!-- <div class="button-box section-space--mt_60">
+                                        <a href="shop-left-sidebar.html" class="text-btn-normal font-weight--reguler font-lg-p">Shop Now <i class="icon-arrow-right"></i></a>
+                                    </div> -->
+                                </div>
+                                <div class="inner-images">
+                                    <div class="image-one">
+                                        <img src="{% static 'images/masks/disposable-face-masks-triple-ply-br-disposable-face-masks-14663372603492_500x.png' %}" class="img-fluid" alt="Image">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+    </div>
+    <!-- Hero Slider Area End -->
+
+    <!-- Banner Area Start -->
+    <div class="banner-area-box">
+        <div class="container">
+            <div class="row banner-inner-box">
+                <div class="col-lg-6 col-md-6">
+                    <div class="banner-images-one mt-30 bg-gray">
+                        <a href="#" class="thumbnail">
+                            <img src="{% static 'images/white_02-1303x843.png' %}" class="img-fluid"
+                                alt="Banner images">
+                        </a>
+                        <div class="banner-title">
+                            <h3><a href="#">Khẩu trang Y tế 4 lớp </a></h3>
+                            <h6></h6>
+                            <div class="button-box mt-40">
+                                <a href="{% url 'view_shop' %}" class="text-btn-normal">Xem thêm<i
+                                        class="icon-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="banner-images-one mt-30 bg-gray">
+                        <a href="" class="thumbnail">
+                            <img src="{% static 'images/Hồng1.png' %}" class="img-fluid" alt="Banner images">
+                        </a>
+                        <div class="banner-title">
+                            <h3><a href="#">Khẩu trang màu 4 lớp</a></h3>
+                            <h6></h6>
+                            <div class="button-box mt-40">
+                                <a href="{% url 'view_shop' %}" class="text-btn-normal">Xem thêm<i
+                                        class="icon-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Banner Area End -->
+
+    <!-- About us Area Start -->
+    <div class="about-us-area section-space--pt_120">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="hero-about-us-content text-center">
+                        <h4>ALKA GLUTA</h4>
+                        <p> là cái tên được tin cậy trong lĩnh vực sức khỏe và sắc đẹp.</p>
+                        <p>“Chúng tôi tự hào mang đến cho bạn những sản phẩm tốt nhất và luôn tận tâm cung cấp những sản
+                            phẩm an toàn và hiệu quả giúp mọi người bổ sung cho cuộc sống.”</p>
+                        <p>“Để cung cấp các sản phẩm chăm sóc sức khỏe và sắc đẹp chất lượng cao nhất với giá trị tốt
+                            nhất cho khách hàng của chúng tôi.”</p>
+
+                        <div class="about-us-button section-space--mt_60">
+                            <a href="{% url 'about_us' %}" class="btn--text-icon">Tìm hiểu thêm về chúng tôi <i
+                                    class="arrow_carrot-2right"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About us Area End -->
+    <br>
+    <!-- Banner Video Area Start -->
+    <div class="banner-video-area overflow-hidden">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="banner-video-box">
+                        <img src="{% static 'images/masks/[1170px x 574px] 2.png' %}" alt="">
+                        <div class="video-icon">
+                            <a href="https://www.youtube.com/watch?v=cKIPzLKaDEI" class="popup-youtube"><i
+                                    class="linear-ic-play"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Banner Video Area End -->
+    <br>
+    <!-- Product Area Start -->
+    <!-- Product Area End -->
+
+    <div class="featuted-product-wrap section-space--pt_120">
+        <div class="container">
+            <div class="row align-items-center featuted-product-one">
+                <div class="col-lg-8 col-md-6 order-lg-2 order-1">
+                    <!-- <div class="easyzoom-style">
+                            <div class="easyzoom easyzoom--overlay">
+                                <a href="{% static 'images/masks/[671px x 318px] 1.png' %}" class="poppu-img">
+                                    <img src="{% static 'images/masks/[671px x 318px] 1.png' %}" class="img-fluid" alt="">
+                                </a>
+                            </div>
+                        </div> -->
+                    <div class="product-thumbnail">
+                        <a href="{% static 'images/masks/[1200px x 675px] 2.png' %}"><img
+                                src="{% static 'images/masks/[1200px x 675px] 2.png' %}" class="img-fluid"
+                                alt="Featured Image"></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 order-lg-1 order-2">
+                    <div class="featured-product-contect">
+                        <h3 class="section-title">ƯU ĐIỂM SỬ DỤNG</h3>
+                        <h5 class="featured-pice">
+                            Khẩu trang 4 lớp dùng một lần: <br>
+                            - Chống bụi. <br>
+                            - Chống ô nhiễm trong không khí. <br>
+                            - Mức độ bảo vệ cao trong môi trường chất lỏng và đảm bảo người dùng có thể thực hiện các
+                            hoạt động bình thường. <br>
+                            - Lọc tốt các vi khuẩn và các hạt bụi.
+                        </h5>
+
+                        <!-- <div class="button-box section-space--mt_60">
+                                <a href="shop-left-sidebar.html" class="btn--text-icon"><i class="arrow_carrot-2right"></i></a>
+                            </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="featuted-product-wrap section-space--pt_120">
+        <div class="container">
+            <div class="row align-items-center featuted-product-one">
+                <div class="col-lg-8 col-md-6 order-lg-1 order-1">
+                    <!-- <div class="product-thumbnail">
+                            <a href="#"><img src="{% static 'images/masks/FACE MASK - ALKA GLUTA_007-1.jpg' %}" class="img-fluid" alt="Featured Image"></a>
+                        </div> -->
+                    <div class="product-details-left">
+                        <div class="product-details-images-2 slider-lg-image-2">
+
+                            <div class="easyzoom-style">
+                                <div class="easyzoom easyzoom--overlay">
+                                    <a href="{% static 'images/masks/[680px x 433px] 1.png' %}" class="poppu-img">
+                                        <img src="{% static 'images/masks/[680px x 433px] 1.png' %}" class="img-fluid"
+                                            alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="easyzoom-style">
+                                <div class="easyzoom easyzoom--overlay">
+                                    <a href="{% static 'images/masks/[680px x 433px] 2.png' %}" class="poppu-img">
+                                        <img src="{% static 'images/masks/[680px x 433px] 2.png' %}" class="img-fluid"
+                                            alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="easyzoom-style">
+                                <div class="easyzoom easyzoom--overlay">
+                                    <a href="{% static 'images/masks/[680px x 433px] 3.png' %}" class="poppu-img">
+                                        <img src="{% static 'images/masks/[680px x 433px] 3.png' %}" class="img-fluid"
+                                            alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="easyzoom-style">
+                                <div class="easyzoom easyzoom--overlay">
+                                    <a href="{% static 'images/masks/[680px x 433px] 4.png' %}" class="poppu-img">
+                                        <img src="{% static 'images/masks/[680px x 433px] 4.png' %}" class="img-fluid"
+                                            alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="easyzoom-style">
+                                <div class="easyzoom easyzoom--overlay">
+                                    <a href="{% static 'images/masks/[680px x 433px] 5.png' %}" class="poppu-img">
+                                        <img src="{% static 'images/masks/[680px x 433px] 5.png' %}" class="img-fluid"
+                                            alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-details-thumbs-2 slider-thumbs-2">
+                            <div class="sm-image"><img src="{% static 'images/masks/[680px x 433px] 1.png' %}"
+                                    alt="product image thumb" width="100"></div>
+                            <div class="sm-image"><img src="{% static 'images/masks/[680px x 433px] 2.png' %}"
+                                    alt="product image thumb" width="100"></div>
+                            <div class="sm-image"><img src="{% static 'images/masks/[680px x 433px] 3.png' %}"
+                                    alt="product image thumb" width="100"></div>
+                            <div class="sm-image"><img src="{% static 'images/masks/[680px x 433px] 4.png' %}"
+                                    alt="product image thumb" width="100"></div>
+                            <div class="sm-image"><img src="{% static 'images/masks/[680px x 433px] 5.png' %}"
+                                    alt="product image thumb" width="100"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 order-lg-2 order-2">
+                    <div class="featured-product-contect text-right">
+                        <h3 class="section-title">TIỆN NGHI VÀ HIỆU QUẢ </h3>
+                        <h6 class="featured-pice">
+                            Kích thước người lớn - Tùy chỉnh phù hợp - Quai tai có độ đàn hồi cao. <br>
+                            Vải không dệt / Vải lọc SMS / Vải không dệt Meltblown. <br>
+                            Kẹp mũi - Có thể được điều chỉnh để tạo điều kiện thuận lợi cho vị trí chính xác của nó trên
+                            mũi của người dùng và vẫn giữ nguyên vị trí.
+
+                        </h6>
+
+                        <!-- <div class="button-box section-space--mt_60">
+                                <a href="shop-left-sidebar.html" class="btn--text-icon">Discover Now <i class="arrow_carrot-2right"></i></a>
+                            </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <br><br><br>
+    <!-- Offer Colection Area Start -->
+    <div class="offer-colection-area">
+        <div class="section-space--ptb_120 bg-img" data-bg="{% static 'images/masks/[1920px x 320px].png' %}">
+            <div class="container">
+                <div class="row">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-7 col-md-9">
+                                <div class="colection-info-wrap">
+                                    <div class="section-title mb-10">
+                                        <h2 class="h-lg"> <span class="text-red">N-95 Khẩu trang sử dụng trong phẫu
+                                                thuật</span></h2>
+                                    </div>
+                                    <p class="font-lg-p"><span class="text-red">Vải không dệt. Lớp hút ẩm. Meltblown
+                                            không dệt <br> 4 lớp và 5 lớp</span></p>
+                                    <div class="button-box section-space--mt_60">
+                                        <a href="{% url 'coming_soon' %}"
+                                            class="text-btn-normal font-weight--bold font-lg-p">Discover now <i
+                                                class="icon-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="featuted-product-wrap section-space--pt_120">
+        <div class="container">
+            <div class="row align-items-center featuted-product-one">
+                <div class="col-lg-8 col-md-6 order-lg-2 order-1">
+                    <div class="easyzoom-style">
+                        <div class="easyzoom easyzoom--overlay">
+                            <a href="{% static 'images/masks/[1200px x 675px] 1.png' %}" class="poppu-img">
+                                <img src="{% static 'images/masks/[1200px x 675px] 1.png' %}" class="img-fluid" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- <div class="product-thumbnail">
+                            <a href="shop-left-sidebar.html"><img src="{% static 'images/masks/[650px x 414px] 1.jpg' %}" class="img-fluid" alt="Featured Image"></a>
+                        </div> -->
+                </div>
+                <div class="col-lg-4 col-md-6 order-lg-1 order-2">
+                    <div class="featured-product-contect">
+                        <h3 class="section-title">KHẨU TRANG 4 LỚP VÀ 5 LỚP</h3>
+                        <h6 class="featured-pice">
+                            - 1 thùng / 60 hộp; 1 hộp / 30 cái. <br>
+                            - Chất liệu: Vải không dệt / Lớp hút ẩm / Vải không dệt Meltblown. <br>
+                            - Màu: Trắng. <br>
+                            - Kích thước: 160 x 210 mm. <br>
+                        </h6>
+
+                        <!-- <div class="button-box section-space--mt_60">
+                                <a href="shop-left-sidebar.html" class="btn--text-icon">Discover Now <i class="arrow_carrot-2right"></i></a>
+                            </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="featuted-product-wrap section-space--pt_120">
+            <div class="container">
+                <div class="row align-items-center featuted-product-one">
+                    <div class="col-lg-8 col-md-6 order-lg-1 order-1">
+                        <div class="product-thumbnail">
+                            <a href="shop-left-sidebar.html"><img src="{% static 'images/masks/[1170px x 574px] 1.png' %}" class="img-fluid" alt="Featured Image"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 order-lg-2 order-2">
+                        <div class="featured-product-contect text-right">
+                            <h3 class="section-title"><a href="shop-left-sidebar.html">CERTIFICATES</a></h3>
+                            <h6 class="featured-pice">
+                               
+                            </h6>
+
+                            <!-- <div class="button-box section-space--mt_60">
+                                <a href="shop-left-sidebar.html" class="btn--text-icon">Discover Now <i class="arrow_carrot-2right"></i></a>
+                            </div> -->
+</div>
+</div>
+</div>
+</div>
+</div> -->
+<!-- Offer Colection Area End -->
+
+
+<!-- Product Area Start -->
+<div class="product-wrapper section-space--ptb_120">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-4">
+                <div class="section-title text-lg-left text-center mb-20">
+                    <h3 class="section-title">Sản phẩm của chúng tôi</h3>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <ul class="nav product-tab-menu justify-content-lg-end justify-content-center" role="tablist">
+                    <li class="tab__item nav-item active">
+                        <a class="nav-link active" data-toggle="tab" href="#tab_list_1" role="tab">Tất cả Sản phẩm </a>
+                    </li>
+                    <li class="tab__item nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#tab_list_2" role="tab"></a>
+                    </li>
+                    <!-- <li class="tab__item nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#tab_list_3" role="tab">Găng tay Y tế</a>
+                            </li>
+                            <li class="tab__item nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#tab_list_4" role="tab">Giấy cồn Lau tay</a>
+                            </li>
+                            <li class="tab__item nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#tab_list_5" role="tab">Mặt hàng khác</a>
+                            </li> -->
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="tab-content mt-30">
+            <div class="tab-pane fade show active" id="tab_list_1">
+                <!-- product-slider-active -->
+                <div class="row">
+                    <!-- Single Product Item Start -->
+                    {% for product in products %}
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="single-product-item text-center">
+                            <div class="products-images">
+                                <a href="{% url 'detail' product_id=product.id %}" class="product-thumbnail">
+                                    <img src="{% static product.image %}" class="img-fluid" alt="Product Images">
+                                </a>
+                                <div class="product-actions">
+                                    <!-- <a href="#" data-toggle="modal" data-target="#prodect-modal"><i class="p-icon icon-plus"></i><span class="tool-tip">Quick View</span></a> -->
+                                    <a href="{% url 'detail' product_id=product.id %}"><i class="p-icon icon-bag2"></i>
+                                        <span class="tool-tip update-cart">Xem chi tiết</span></a>
+                                    <!-- <a href="wishlist.html"><i class="p-icon icon-heart"></i> <span class="tool-tip">Browse Wishlist</span></a> -->
+                                </div>
+                            </div>
+                            <div class="product-content">
+                                <h6 class="prodect-title"><a href="{% url 'detail' product_id=product.id %}">
+                                        {{ product.name }}</a></h6>
+                                <div class="prodect-price">
+                                    <span class="new-price">{{ product.price|intcomma }} VND</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+         
+                    <!-- Single Product Item End -->
+                </div>
+            </div>
+            <div class="tab-pane" id="tab_list_2">
+                <div class="row ">
+                    {% for category in category_mask %}
+                    {% for product_1 in category.product_set.all %}
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <!-- Single Product Item Start -->
+                        <div class="single-product-item text-center">
+                            <div class="products-images">
+                                <a href="#" class="product-thumbnail">
+                                    <img src="#" class="img-fluid" alt="Product Images">
+                                </a>
+                                <div class="product-actions">
+                                    <!-- <a href="#" data-toggle="modal" data-target="#prodect-modal"><i class="p-icon icon-plus"></i><span class="tool-tip">Quick View</span></a> -->
+                                    <a href="#"><i class="p-icon icon-bag2"></i> <span class="tool-tip">Add to
+                                            cart</span></a>
+                                    <!-- <a href="wishlist.html"><i class="p-icon icon-heart"></i> <span class="tool-tip">Browse Wishlist</span></a> -->
+                                </div>
+                            </div>
+                            <div class="product-content">
+                                <h6 class="prodect-title"><a href="{% url 'detail' product_id=product.id %}">{{
+                                        product_1.name }}</a></h6>
+                                <div class="prodect-price">
+                                    <span class="new-price">{{ product_1.price|intcomma }} VND</span>
+                                </div>
+                            </div>
+                        </div><!-- Single Product Item End -->
+                    </div>
+                    {% endfor %}
+                    {% endfor %}
+
+                </div>
+            </div>
+            <div class="tab-pane fade" id="tab_list_3">
+                <div class="row ">
+                    {% for product_2 in products1 %}
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <!-- Single Product Item Start -->
+                        <div class="single-product-item text-center">
+                            <div class="products-images">
+                                <a href="#" class="product-thumbnail">
+                                    <img src="#" class="img-fluid" alt="Product Images">
+
+                                </a>
+                                <div class="product-actions">
+                                    <!-- <a href="#" data-toggle="modal" data-target="#prodect-modal"><i class="p-icon icon-plus"></i><span class="tool-tip">Quick View</span></a> -->
+                                    <a href="#"><i class="p-icon icon-bag2"></i> <span class="tool-tip">Add to
+                                            cart</span></a>
+                                    <!-- <a href="wishlist.html"><i class="p-icon icon-heart"></i> <span class="tool-tip">Browse Wishlist</span></a> -->
+                                </div>
+                            </div>
+                            <div class="product-content">
+                                <h6 class="prodect-title"><a href="{% url 'detail' product_id=product.id %}">{{
+                                        product_2.name }}</a></h6>
+                                <div class="prodect-price">
+                                    <span class="new-price">{{ product_2.price|intcomma }} VND</span>
+                                </div>
+                            </div>
+                        </div><!-- Single Product Item End -->
+                    </div>
+                    {% endfor %}
+
+                </div>
+            </div>
+            <div class="tab-pane fade" id="tab_list_4">
+                <div class="row ">
+                    {% for category_3 in category_wipes %}
+                    {% for product_3 in category_3.product_set.all %}
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <!-- Single Product Item Start -->
+                        <div class="single-product-item text-center">
+                            <div class="products-images">
+                                <a href="#" class="product-thumbnail">
+                                    <img src="#" class="img-fluid" alt="Product Images">
+
+                                </a>
+                                <div class="product-actions">
+                                    <!-- <a href="#" data-toggle="modal" data-target="#prodect-modal"><i class="p-icon icon-plus"></i><span class="tool-tip">Quick View</span></a> -->
+                                    <a href="#"><i class="p-icon icon-bag2"></i> <span class="tool-tip">Add to
+                                            cart</span></a>
+                                    <!-- <a href="wishlist.html"><i class="p-icon icon-heart"></i> <span class="tool-tip">Browse Wishlist</span></a> -->
+                                </div>
+                            </div>
+                            <div class="product-content">
+                                <h6 class="prodect-title"><a href="{% url 'detail' product_id=product.id %}">{{
+                                        product_3.name }}</a></h6>
+                                <div class="prodect-price">
+                                    <span class="new-price">{{ product_3.price|intcomma }} VND</span>
+                                </div>
+                            </div>
+                        </div><!-- Single Product Item End -->
+                    </div>
+                    {% endfor %}
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="tab-pane fade" id="tab_list_5">
+                <div class="row ">
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="single-product-item text-center">
+                            <h4>ĐANG CẬP NHẬT</h4>
+                        </div>
+                    </div>
+
+                    <!-- {% for category_1 in category_other %}
+                                {% for product_1 in category_1.product_set.all %}
+                                    <div class="col-lg-3 col-md-4 col-sm-6">
+                                        <div class="single-product-item text-center">
+                                            <div class="products-images">
+                                                <a href="#" class="product-thumbnail">
+                                                    <img src="{% static 'images/product/1_9-300x300.jpg' %}" class="img-fluid" alt="Product Images">
+
+                                                </a>
+                                                <div class="product-actions">
+                                                    <a href="#" data-toggle="modal" data-target="#prodect-modal"><i class="p-icon icon-plus"></i><span class="tool-tip">Quick View</span></a>
+                                                    <a href="product-details.html"><i class="p-icon icon-bag2"></i> <span class="tool-tip">Add to cart</span></a>
+                                                    <a href="wishlist.html"><i class="p-icon icon-heart"></i> <span class="tool-tip">Browse Wishlist</span></a>
+                                                </div>
+                                            </div>
+                                            <div class="product-content">
+                                                <h6 class="prodect-title"><a href="product-details.html">{{ product_1.name }}</a></h6>
+                                                <div class="prodect-price">
+                                                    <span class="new-price">{{ product_1.price|intcomma }} VND</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            {% endfor %} -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<!-- Product Area End -->
+
+
+<!-- Our Blog Area Start -->
+<div class="our-blog-area section-space--pb_90">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-10">
+                <div class="section-title text-left mb-20">
+                    <h2 class="section-title">Mới nhất từ blog của chúng tôi</h2>
+                </div>
+            </div>
+            <!-- <div class="col-md-2">
+                        <a href="blog-grid.html" class="text-btn-normal">Discover now <i class="icon-arrow-right"></i></a>
+                    </div> -->
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                <!-- Single Blog Item Start -->
+                <div class="single-blog-item mt-30">
+                    <div class="blog-thumbnail-box">
+                        <a href="{% static 'images/blog/75eebb476afc94a2cded.jpg' %}" class="thumbnail">
+                            <img src="{% static 'images/blog/75eebb476afc94a2cded.jpg' %}" class="img-fluid"
+                                alt="Blog Images">
+                        </a>
+                        <!-- <a href="single-blog-post.html" class="btn-blog"> Read more </a> -->
+                    </div>
+                    <div class="blog-contents">
+                        <h6 class="blog-title">Khẩu trang ALKA GLUTA đã có mặt tại Nhà thuốc Y Tâm.</h6>
+                        <div class="meta-tag-box">
+                            <div class="meta date"><span>November 15, 2020</span></div>
+                            <div class="meta author"><span>ALKA</span></div>
+                            <div class="meta cat"><span> Khẩu Trang Y Tế</span></div>
+                        </div>
+                    </div>
+                </div><!-- Single Blog Item End -->
+            </div>
+            <div class="col-lg-4 col-md-6  col-sm-6 col-12">
+                <!-- Single Blog Item Start -->
+                <div class="single-blog-item mt-30">
+                    <div class="blog-thumbnail-box">
+                        <a href="{% static 'images/blog/a9a5676d2fbcdee287ad.jpg' %}" class="thumbnail">
+                            <img src="{% static 'images/blog/a9a5676d2fbcdee287ad.jpg' %}" class="img-fluid"
+                                alt="Blog Images">
+                        </a>
+                        <!-- <a href="single-blog-post.html" class="btn-blog"> Read more </a> -->
+                    </div>
+                    <div class="blog-contents">
+                        <h6 class="blog-title">Khẩu trang ALKA được sử dụng bởi học sinh trường Á Châu HCM.</h6>
+                        <div class="meta-tag-box">
+                            <div class="meta date"><span>December 02, 2020</span></div>
+                            <div class="meta author"><span>ALKA</span></div>
+                            <div class="meta cat"><span> Khẩu Trang Y Tế</span></div>
+                        </div>
+                    </div>
+                </div><!-- Single Blog Item End -->
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                <!-- Single Blog Item Start -->
+                <!-- <div class="single-blog-item mt-30">
+                            <div class="blog-thumbnail-box">
+                                <a href="single-blog-post.html" class="thumbnail">
+                                    <img src="{% static 'images/blog/10-570x370.jpg' %}" class="img-fluid" alt="Blog Images">
+                                </a>
+                                <a href="single-blog-post.html" class="btn-blog"> Read more </a>
+                            </div>
+                            <div class="blog-contents">
+                                <h6 class="blog-title"><a href="single-blog-post.html">Spatialize with the decorations of the Helendo store.</a></h6>
+                                <div class="meta-tag-box">
+                                    <div class="meta date"><span>October 18, 2020</span></div>
+                                    <div class="meta author"><span><a href="#">Hastheme</a></span></div>
+                                    <div class="meta cat"><span>in <a href="#">Chair</a></span></div>
+                                </div>
+                            </div> -->
+            </div><!-- Single Blog Item End -->
+        </div>
+    </div>
+
+</div>
+</div>
+<!-- Our Blog Area End -->
+
+
+<!-- Our Brand Area Start -->
+<!-- <div class="our-brand-area section-space--pb_90">
+            <div class="container">
+                <div class="row brand-slider-active">
+                    <div class="col-lg-12">
+                        <div class="single-brand-item">
+                            <a href="#"><img src="{% static 'images/brand/partner1.jpg' %}" class="img-fluid" alt="Brand Images"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="single-brand-item">
+                            <a href="#"><img src="{% static 'images/brand/partner2.jpg' %}" class="img-fluid" alt="Brand Images"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="single-brand-item">
+                            <a href="#"><img src="{% static 'images/brand/partner3.jpg' %}" class="img-fluid" alt="Brand Images"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="single-brand-item">
+                            <a href="#"><img src="{% static 'images/brand/partner4.jpg' %}" class="img-fluid" alt="Brand Images"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="single-brand-item">
+                            <a href="#"><img src="{% static 'images/brand/partner5.jpg' %}" class="img-fluid" alt="Brand Images"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="single-brand-item">
+                            <a href="#"><img src="{% static 'images/brand/partner3.jpg' %}" class="img-fluid" alt="Brand Images"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+<!-- Our Brand Area End -->
+
+</div>
+{% endblock content %}
